@@ -1,0 +1,13 @@
+graph LR
+    subgraph Ingress / Service
+    StageIngress --> StageService:::disabled
+    ProdIngress --> ProdService:::blue
+    end
+    subgraph Pod
+    StageService --> BlueSlot:::notrunning
+    ProdService --> GreenSlot:::green
+    end
+    classDef blue fill:#3366ff;
+    classDef green fill:#66ff33;
+    classDef disabled fill:#cccccc;
+    classDef notrunning fill:#ff6633;

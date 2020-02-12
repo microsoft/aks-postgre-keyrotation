@@ -1,0 +1,11 @@
+graph LR
+    subgraph Ingress / Service
+    StageIngress --> StageService:::green
+    ProdIngress --> ProdService:::blue
+    end
+    subgraph Pod
+    StageService --> GreenSlot:::green
+    ProdService --> BlueSlot:::blue
+    end
+    classDef blue fill:#3366ff;
+    classDef green fill:#66ff33;

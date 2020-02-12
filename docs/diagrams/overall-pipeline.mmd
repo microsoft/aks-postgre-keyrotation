@@ -1,0 +1,9 @@
+sequenceDiagram
+    User ->> DevOps: User starts key rotation pipeline
+    DevOps ->> Destination: Pipeline creates password using secret 2
+    DevOps ->> KeyVault: Pipeline updates secret 2 in KeyVault
+    DevOps ->> Source: Pipeline updates source staging instance
+    DevOps ->> Source: Pipeline runs automated integration testing against staging instance
+    DevOps ->> Source: Pipeline tells ingress to point from production to staging
+    DevOps ->> Source: Pipeline keeps track of which slot is current production
+    DevOps ->> Source: Pipeline destroys old production

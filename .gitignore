@@ -16,6 +16,12 @@
 # Mono auto generated files
 mono_crash.*
 
+# Terraform
+.terraform
+*.tfstate
+*.tfstate.*
+lock.json
+
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/
@@ -351,3 +357,8 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+PostGreKeyRotation/Deployment/ianbe-provider.tfvals
+PostGreKeyRotation/Deployment/ianbe-tf-sp.private
+PostGreKeyRotation/Deployment/foobar.ps1
+PostGreKeyRotation/Deployment/foobar.sh
+docs/package-lock.json
