@@ -1,0 +1,42 @@
+environment: development
+
+apphost: k8s
+
+label:
+  name: postgrekeyrotation
+
+productionSlot: blue
+blue:
+  enabled: true
+  tag: 132
+  connectionString:
+    roleName: pgapproleblue
+    mountPoint: /mnt/keyvault/pgmainbluepwd
+
+green:
+  enabled: true
+  tag: 132
+  connectionString:
+    roleName: pgapprolegreen
+    mountPoint: /mnt/keyvault/pgmaingreenpwd
+
+azure:
+  resourceGroupName: KeyRotation
+  keyVaultName: jwrotatekeyvault
+  applicationGatewayName: jwrotateag
+  subscriptionId: <subscription-id>
+  tenantId: <tenant-id>
+
+connectionString:
+  template: Server=ibpostgreserver.postgres.database.azure.com;Database=ibpostgredb;Port=5432;User Id={RoleName}@ibpostgreserver;Password={Pwd};Ssl Mode=Require;
+
+container:
+  name: postgrekeyrotation
+  pullPolicy: IfNotPresent
+  image: jwrotateacr.azurecr.io/postgrekeyrotation
+  port: 80
+replicas: 1
+
+service:
+  port: 80
+  type: ClusterIP
