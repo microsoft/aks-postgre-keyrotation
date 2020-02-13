@@ -22,18 +22,18 @@ green:
 
 azure:
   resourceGroupName: KeyRotation
-  keyVaultName: jwrotatekeyvault
-  applicationGatewayName: jwrotateag
+  keyVaultName: <keyvault-name>
+  applicationGatewayName: <application-gateway-name>
   subscriptionId: <subscription-id>
   tenantId: <tenant-id>
 
 connectionString:
-  template: Server=ibpostgreserver.postgres.database.azure.com;Database=ibpostgredb;Port=5432;User Id={RoleName}@ibpostgreserver;Password={Pwd};Ssl Mode=Require;
+  template: <connection-string-template>
 
 container:
   name: postgrekeyrotation
   pullPolicy: IfNotPresent
-  image: jwrotateacr.azurecr.io/postgrekeyrotation
+  image: <acr-image-name>
   port: 80
 replicas: 1
 
