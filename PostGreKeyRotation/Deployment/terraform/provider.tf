@@ -17,7 +17,7 @@ provider "postgresql" {
 terraform {
   backend "azurerm" {
     resource_group_name  = "KeyRotateState"
-    storage_account_name = "jwtfkrstatestore"
+    storage_account_name = "..."
     container_name       = "terraform-state"
     key                  = "development.tfstate"
   }

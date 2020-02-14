@@ -144,7 +144,7 @@ steps:
       scriptLocation: 'scriptPath'
       scriptPath: '$(System.DefaultWorkingDirectory)/PostGreKeyRotation/Deployment/scripts/pg-deploy-production.sh'
       workingDirectory: '$(System.DefaultWorkingDirectory)/PostGreKeyRotation/Deployment/scripts'
-      arguments: 'pgapprolegreen $(Build.BuildId)'
+      arguments: 'pgapprolegreen $(Build.BuildId) <database-server-name> <database-name>'
 
   - task: Bash@3
     displayName: 'Set buildTag Variable'

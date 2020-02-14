@@ -8,6 +8,8 @@ This generally requires changes to be done for the source application, the abili
 
 > The reason why we are attempting to accomplish this with zero downtime is to remove the friction and high cost of deploying changes to an environment so we can more frequently rotate secrets.
 
+Please see [Getting Started](docs/getting-started.md) for information on how to run the code.
+
 ## Blue / Green Deployment
 
 One approach to handling the source application updates when using Azure Kubernetes Service is to utilize Azure Application Gateway and handle Blue / Green deployments using helm and the Ingress controller that comes with Azure Application Gateway.
