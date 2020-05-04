@@ -6,7 +6,7 @@ products:
 - azure
 - azure-key-vault
 - azure-kubernetes-service
-description: "This example project demonstrates how to handle secret rotation from a web application running in Azure Kubernetes Service, stores the secrets into KeyVault and then uses those secrets to access Azure PostgreSQL instance."
+description: "This example project demonstrates how to handle secret rotation from a web application running in Azure Kubernetes Service.  The example stores the secrets in Azure KeyVault and then uses those secrets to access an Azure PostgreSQL instance."
 ---
 
 # Blue / Green Secret Rotation with Azure KeyVault and AKS
