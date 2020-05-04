@@ -3,9 +3,10 @@ page_type: sample
 languages:
 - csharp
 products:
-- dotnet
+- azure
+- azure-key-vault
+- azure-kubernetes-service
 description: "This example project demonstrates how to handle secret rotation from a web application running in Azure Kubernetes Service, stores the secrets into KeyVault and then uses those secrets to access Azure PostgreSQL instance."
-urlFragment: "update-this-to-unique-url-stub"
 ---
 
 # Blue / Green Secret Rotation with Azure KeyVault and AKS
