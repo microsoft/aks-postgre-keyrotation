@@ -1,0 +1,17 @@
+# // Copyright (c) Microsoft Corporation.
+# // Licensed under the MIT license.
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: {{ .Release.Name }}-ingress-prod
+  annotations:
+    kubernetes.io/ingress.class: azure/application-gateway
+spec:
+  rules:
+  - host: rotate.contoso.com
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: {{ .Release.Name }}-service-prod
+          servicePort: {{ .Values.service.port }}

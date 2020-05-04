@@ -1,0 +1,4 @@
+# // Copyright (c) Microsoft Corporation.
+# // Licensed under the MIT license.
+name: postgrekeyrotation
+version: 1.1.0

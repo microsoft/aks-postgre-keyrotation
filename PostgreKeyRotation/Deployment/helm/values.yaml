@@ -1,0 +1,44 @@
+# // Copyright (c) Microsoft Corporation.
+# // Licensed under the MIT license.
+environment: development
+
+apphost: k8s
+
+label:
+  name: postgrekeyrotation
+
+productionSlot: blue
+blue:
+  enabled: true
+  tag: 132
+  connectionString:
+    roleName: pgapproleblue
+    mountPoint: /mnt/keyvault/pgmainbluepwd
+
+green:
+  enabled: true
+  tag: 132
+  connectionString:
+    roleName: pgapprolegreen
+    mountPoint: /mnt/keyvault/pgmaingreenpwd
+
+azure:
+  resourceGroupName: KeyRotation
+  keyVaultName: <keyvault-name>
+  applicationGatewayName: <application-gateway-name>
+  subscriptionId: <subscription-id>
+  tenantId: <tenant-id>
+
+connectionString:
+  template: <connection-string-template>
+
+container:
+  name: postgrekeyrotation
+  pullPolicy: IfNotPresent
+  image: <acr-image-name>
+  port: 80
+replicas: 1
+
+service:
+  port: 80
+  type: ClusterIP
