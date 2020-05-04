@@ -13,7 +13,7 @@ description: "This example project demonstrates how to handle secret rotation fr
 
 ## General
 
-This example project demonstrates how to handle secret rotation from a web application running in Azure Kubernetes Service, stores the secrets into KeyVault and then uses those secrets to access Azure SQL Postgre instance. 
+This example project demonstrates how to handle secret rotation from a web application running in Azure Kubernetes Service.  The example stores the secrets in Azure KeyVault and then uses those secrets to access an Azure PostgreSQL instance. 
 
 This generally requires changes to be done for the source application, the ability to store the secret in a secure vault and updates on the destination application. This is really tricky to do in a way that requires zero down time.
 
