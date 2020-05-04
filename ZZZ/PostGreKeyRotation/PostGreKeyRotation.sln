@@ -1,0 +1,87 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29709.97
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PostGreKeyRotation", "PostGreKeyRotation\PostGreKeyRotation.csproj", "{1EFB208A-953D-4FED-BD2F-9A3FCFE25476}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0887C848-2148-45BE-983D-A44C9B0CA83D}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Deployment", "Deployment", "{FF5E291C-E19A-495E-A368-148B2718DFA9}"
+	ProjectSection(SolutionItems) = preProject
+		Deployment\azure-pipelines.yml = Deployment\azure-pipelines.yml
+		Deployment\create-for-rbac.sh = Deployment\create-for-rbac.sh
+		Deployment\jw-run-terraform.sh = Deployment\jw-run-terraform.sh
+		Deployment\main.tf = Deployment\main.tf
+		Deployment\provider.tf = Deployment\provider.tf
+		Deployment\variables.tf = Deployment\variables.tf
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docker", "docker", "{3DE46445-E81E-49A3-8F4E-15FADF900C3B}"
+	ProjectSection(SolutionItems) = preProject
+		Deployment\docker\dockerbuild.cmd = Deployment\docker\dockerbuild.cmd
+		Deployment\docker\dockerbuild.sh = Deployment\docker\dockerbuild.sh
+		Deployment\docker\dockerlogs.cmd = Deployment\docker\dockerlogs.cmd
+		Deployment\docker\dockerlogs.sh = Deployment\docker\dockerlogs.sh
+		Deployment\docker\dockerrm.cmd = Deployment\docker\dockerrm.cmd
+		Deployment\docker\dockerrm.sh = Deployment\docker\dockerrm.sh
+		Deployment\docker\dockerrun.cmd = Deployment\docker\dockerrun.cmd
+		Deployment\docker\dockerrun.sh = Deployment\docker\dockerrun.sh
+		Deployment\docker\dockerstop.cmd = Deployment\docker\dockerstop.cmd
+		Deployment\docker\dockerstop.sh = Deployment\docker\dockerstop.sh
+		Deployment\docker\launchapp.cmd = Deployment\docker\launchapp.cmd
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "helm", "helm", "{7B43E132-2BE9-4C4F-A468-FEE765B9BB0C}"
+	ProjectSection(SolutionItems) = preProject
+		Deployment\helm\Chart.yaml = Deployment\helm\Chart.yaml
+		Deployment\helm\helmgensecret.sh = Deployment\helm\helmgensecret.sh
+		Deployment\helm\helminstall.cmd = Deployment\helm\helminstall.cmd
+		Deployment\helm\helminstall.sh = Deployment\helm\helminstall.sh
+		Deployment\helm\helmportfwd.cmd = Deployment\helm\helmportfwd.cmd
+		Deployment\helm\helmportfwd.sh = Deployment\helm\helmportfwd.sh
+		Deployment\helm\helmuninstall.cmd = Deployment\helm\helmuninstall.cmd
+		Deployment\helm\helmuninstall.sh = Deployment\helm\helmuninstall.sh
+		Deployment\helm\values.yaml = Deployment\helm\values.yaml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "templates", "templates", "{BEA3D489-B800-44DC-933A-6F08EE0DF1DA}"
+	ProjectSection(SolutionItems) = preProject
+		Deployment\helm\templates\deployment.yaml = Deployment\helm\templates\deployment.yaml
+		Deployment\helm\templates\secret.yaml = Deployment\helm\templates\secret.yaml
+		Deployment\helm\templates\service.yaml = Deployment\helm\templates\service.yaml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostGreKeyRotation.IntegrationTests", "PostGreKeyRotation.IntegrationTests\PostGreKeyRotation.IntegrationTests.csproj", "{1A5DF992-D82D-454D-8CC4-0D92D44AB0A5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1EFB208A-953D-4FED-BD2F-9A3FCFE25476}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EFB208A-953D-4FED-BD2F-9A3FCFE25476}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EFB208A-953D-4FED-BD2F-9A3FCFE25476}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EFB208A-953D-4FED-BD2F-9A3FCFE25476}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A5DF992-D82D-454D-8CC4-0D92D44AB0A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A5DF992-D82D-454D-8CC4-0D92D44AB0A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A5DF992-D82D-454D-8CC4-0D92D44AB0A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A5DF992-D82D-454D-8CC4-0D92D44AB0A5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FF5E291C-E19A-495E-A368-148B2718DFA9} = {0887C848-2148-45BE-983D-A44C9B0CA83D}
+		{3DE46445-E81E-49A3-8F4E-15FADF900C3B} = {FF5E291C-E19A-495E-A368-148B2718DFA9}
+		{7B43E132-2BE9-4C4F-A468-FEE765B9BB0C} = {FF5E291C-E19A-495E-A368-148B2718DFA9}
+		{BEA3D489-B800-44DC-933A-6F08EE0DF1DA} = {7B43E132-2BE9-4C4F-A468-FEE765B9BB0C}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C3C2F344-C66F-48DA-A141-7BE68B56BF80}
+	EndGlobalSection
+EndGlobal
