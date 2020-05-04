@@ -49,6 +49,7 @@ In this diagram we are showing how Azure Pipelines can be used to orchestrate ea
 
 ![Remove Old Prod](docs/images/remove-old-prod.png)
 
+
 ## Contributing
 
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a
