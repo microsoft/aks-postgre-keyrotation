@@ -1,6 +1,8 @@
 # Running from Azure Pipelines
 
-The pipeline files can be found under the ~/PostgreKeyRotation/Deployment. The file named pg-keyrotation-pipeline.yml creates the environment and pg-keyrotation-ci.yml shows an example of deploying using blue / green deployments.
+The pipeline files can be found under the ~/PostgreKeyRotation/Deployment. The file named pg-keyrotation-ci.yml creates the environment and pg-keyrotation-pipeline.yml shows an example of deploying using blue / green deployments.
+
+This documentation assumes there is an existing Azure DevOps organization and project setup and that we are creating new Azure Pipelines to handle the automation of this deployment. If that is not the case, please follow the guidance on the Azure DevOps [docs page](https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/create-organization?view=azure-devops).
 
 ## Steps
 
