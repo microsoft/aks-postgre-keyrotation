@@ -21,6 +21,8 @@ This generally requires changes to be done for the source application, the abili
 
 Please see [Getting Started](docs/getting-started.md) for information on how to run the code.
 
+To utilize this example effectively, we recommend creating a fork of this repository into your own GitHub account and then referencing that to make changes to the repository.
+
 ## Blue / Green Deployment
 
 One approach to handling the source application updates when using Azure Kubernetes Service is to utilize Azure Application Gateway and handle Blue / Green deployments using helm and the Ingress controller that comes with Azure Application Gateway.
